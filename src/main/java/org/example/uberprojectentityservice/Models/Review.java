@@ -1,5 +1,6 @@
 package org.example.uberprojectentityservice.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,8 +21,9 @@ public class Review extends BaseModel {
 
     private Double rating;
 
-    @OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
+    @OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
     @JoinColumn(nullable = false)
+    @JsonIgnore
     private Booking booking; // we have defined a 1:1 relationship between booking and review
 
     @Override

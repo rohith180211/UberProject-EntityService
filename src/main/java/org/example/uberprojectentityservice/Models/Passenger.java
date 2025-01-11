@@ -8,7 +8,6 @@ import jakarta.persistence.OneToOne;
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
 import lombok.*;
-import org.flywaydb.core.internal.util.ClassUtils;
 
 import java.util.ArrayList;
 import java.util.List;
